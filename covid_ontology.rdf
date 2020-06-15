@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:ns0="http://www.wiproject.net/schemas/relationship/">
+
+  <rdf:Description rdf:about="http://wiproject.org/#/Country">
+    <ns0:locatedIn rdf:resource="http://wiproject.org/#/Continent"/>
+    <ns0:hasDemographicStats>
+      <rdf:Description rdf:about="http://wiproject.org/#/DemographicStats">
+        <ns0:hasPopulation>Population</ns0:hasPopulation>
+        <ns0:hasPopulationDensity>Population Density</ns0:hasPopulationDensity>
+        <ns0:hasGDP>GDP Per Capita</ns0:hasGDP>
+        <ns0:hasNoOfDoctors>Number of Doctors per 1000 People</ns0:hasNoOfDoctors>
+        <ns0:hasLifetimeExp>Overall Lifetime Expectancy</ns0:hasLifetimeExp>
+      </rdf:Description>
+    </ns0:hasDemographicStats>
+
+    <ns0:hasCovidStats>
+      <rdf:Description rdf:about="http://wiproject.org/#/CovidStats">
+        <ns0:onDay rdf:resource="http://wiproject.org/#/Day"/>
+        <ns0:hasTotalCases>Total Cases</ns0:hasTotalCases>
+        <ns0:hasNewCases>New Cases</ns0:hasNewCases>
+        <ns0:hasTotalDeaths>Total Deaths</ns0:hasTotalDeaths>
+        <ns0:hasNewDeaths>New Deaths</ns0:hasNewDeaths>
+      </rdf:Description>
+    </ns0:hasCovidStats>
+
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://wiproject.org/#/Day">
+    <ns0:next rdf:resource="http://wiproject.org/#/Day"/>
+    <ns0:hasDate>Date</ns0:hasDate>
+  </rdf:Description>
+
+</rdf:RDF>
